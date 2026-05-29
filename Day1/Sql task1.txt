@@ -1,0 +1,19 @@
+create database schooldb;
+
+create table students(
+  id int,
+  name varchar(50),
+  age int,
+  grade varchar(1)
+  );
+  
+  insert into students
+  values('1','Saraswathi',23,'A'),
+        ('2','Kavitha',25,'B'),
+        ('3','Sara',21,'C'),
+        ('4','Jhon',19,'A'),
+        ('5','Alice',18,'A');
+        
+  select* from students;
+  
+  drop table students;

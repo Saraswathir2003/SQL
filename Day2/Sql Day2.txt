@@ -1,0 +1,32 @@
+create database CompanyDB;
+
+create table employees(
+     id int primary key,
+     name varchar(50) not null,
+	 salary decimal default 30000,
+     email varchar(100)
+     );
+     
+alter table employees
+add constraint email unique(email);
+
+insert into employees (id, name, salary, email)
+values
+(1, 'Sara', 45000, 'sara@gmail.com'),
+(2, 'Priya', 50000, 'priya@gmail.com'),
+(3, 'Rahul', 35000, 'rahul@gmail.com'),
+(4, 'Anu', 40000, 'anu@gmail.com'),
+(5, 'Kiran', 30000, 'kiran@gmail.com');
+     
+ insert into employees(email)
+ values('sara@gamil.com');
+ 
+alter table employees
+add constraint chk_salary
+check (salary < 40000);
+
+drop check chk_salary;
+ 
+select* from employees;
+DESC employees;
+drop table employees;
